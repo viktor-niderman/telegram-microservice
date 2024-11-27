@@ -51,12 +51,14 @@ docker compose up -d
 
 This will build and start the service in detached mode.
 
+Server is ready to accept requests at `http://localhost:19001`.
+
 ### Sending a Message
 
 You can send a message to your configured Telegram chat using a POST request. For example, with `curl`:
 
 ```bash
-curl -X POST http://localhost:3000/telegram-message \
+curl -X POST http://localhost:19001/telegram-message \
 -H "Content-Type: application/json" \
 -d '{"message": "Hello, Telegram!", "token": "your_secret_token"}'
 ```
